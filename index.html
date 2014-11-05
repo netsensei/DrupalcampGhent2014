@@ -82,8 +82,8 @@
 					<section>
 						<h2>What is a website?</h2>
 
-						<p><span class="fragment">A collection of related or interconnected pages or documents</span> <span class="fragment">written in HTML</span> <span class="fragment">typically served
-						from a single web domain.</span></p>
+						<p><span class="fragment">A collection of related or <span style="color:orange">interconnected pages</span> or documents</span> <span class="fragment" style="color:orange">written in HTML</span> <span class="fragment">typically served
+						from a <span style="color:orange">single web domain</span>.</span></p>
 
 					</section>
 
@@ -108,7 +108,7 @@
 
 						<ul>
 							<li>Blog items</li>
-							<li>Basic texts (a.k.a static content)</li>
+							<li>Basic pages</li>
 							<li>Events</li>
 							<li>Recipes</li>
 							<li>Cars</li>
@@ -120,6 +120,7 @@
 						<br />
 
 						<p class="fragment">We are talking about self contained concepts or "things"</p>
+						<p class="fragment">Can be referred to via an URI</p>
 						<p class="fragment">In Drupal speak: these are nodes or entities</p>
 					</section>
 
@@ -136,13 +137,13 @@
 
 						<p>A webpage consists of a set of components</p>
 
-						<p class="fragment">Recurring components</p>
+						<p class="fragment" style="color: orange">Recurring components</p>
 
 						<p class="fragment">Header, Footer, Navigation,...</p>
 
-						<p class="fragment">Specific components</p>
+						<p class="fragment" style="color: orange">Specific components</p>
 
-						<p class="fragment">Call to actions, content fields (title, body),...</p>
+						<p class="fragment">Content fields (title, body, timestamp,...)</p>
 					</section>
 
 					<section>
@@ -178,7 +179,7 @@
 
 				<section>
 						<h2>Out of the box</h2>
-						<h3>Taming your displays with core modules</h3>
+						<h3>Taming the display of a site with core modules</h3>
 						<img src="./img/lion-tamer.jpg" />
 				</section>
 
@@ -188,8 +189,8 @@
 						<h2>Drupal Blocks</h2>
 
 						<ul>
-							<li class="fragment">What are blocks?</li>
-							<li class="fragment">Regions</li>
+							<li class="fragment">A technical implementation of components</li>
+							<li class="fragment">Arranged in regions</li>
 							<li class="fragment">Managing blocks</li>
 							<li class="fragment">Block visibility</li>
 						</ul>
@@ -270,34 +271,64 @@
 					</section>
 
 					<section>
-						<h2>Drawbacks</h2>
-
-						<ul class="fragment">
-							<li class="fragment">Inflexible</li>
-							<li class="fragment">Hard to mantain afterwards</li>
-							<li class="fragment">Risk of introducing business logic</li>
-						</ul>
-					</section>
-
-					<section>
 					 	<h2>Theme of Doom</h2>
 						<img src="./img/doom.gif" />
 					</section>
+
+					<section>
+						<h2>Drawbacks</h2>
+
+						<ul class="fragment">
+							<li class="fragment">Very inflexible</li>
+							<li class="fragment">Hard to mantain afterwards</li>
+							<li class="fragment">Risk of leaking business logic</li>
+						</ul>
+					</section>
+
 				</section>
 
 
 				<section>
 					<h2>Bring your toolset to the space age</h2>
+
+					<img src="./img/spaceage.jpg" />
 				</section>
 
 				<!-- Context module -->
 				<section>
 					<section>
 						<h2>The Context module</h2>
+
+						<p>Manage contextual conditions/reactions for portions of your site</p>
+						<p>Most common case: blocks and their ilk</p>
 					</section>
 
 					<section>
 						<h2>Demo</h2>
+					</section>
+
+					<section>
+						<h2>Pro's and cons</h2>
+
+						<div class="container" style="clear:both">
+							<div style="float:left; width: 50%">
+								<p>Advantages</p>
+								<ul>
+									<li>More flexible then blocks</li>
+									<li>Ease of use</li>
+									<li>Quite maintainable</li>
+								</ul>
+							</div>
+							<div style="float:left; width: 50%">
+								<p>Drawbacks</p>
+								<ul>
+									<li>Not flexible enough</li>
+									<li>Risk of becoming complex</li>
+									<li>Performance hog</li>
+								</ul>
+							</div>
+						</div>
+
 					</section>
 				</section>
 
@@ -305,10 +336,35 @@
 				<section>
 					<section>
 						<h2>The Display Suite module</h2>
+
+						<p>Manage the display of all your entities</p>
+						<p>Extends Field UI</p>
+						<p>Do away with complex template systems</p>
 					</section>
 
 					<section>
 						<h2>Demo</h2>
+					</section>
+
+					<section>
+						<h2>Pro's and cons</h2>
+
+						<div class="container" style="clear:both">
+							<div style="float:left; width: 50%">
+								<p>Advantages</p>
+								<ul>
+									<li>Maximize flexibility</li>
+									<li>Repeatable</li>
+									<li>Very maintainable</li>
+								</ul>
+							</div>
+							<div style="float:left; width: 50%">
+								<p>Drawbacks</p>
+								<ul>
+									<li>Shoot yourself in the foot</li>
+								</ul>
+							</div>
+						</div>
 					</section>
 				</section>
 
@@ -316,10 +372,35 @@
 				<section>
 					<section>
 						<h2>The Panels module</h2>
+
+						<p>Manage the layout of the content region</p>
+						<p>Or the entire page (Panels Everywhere)</p>
 					</section>
 
 					<section>
 						<h2>Demo</h2>
+					</section>
+
+					<section>
+						<h2>Pro's and cons</h2>
+
+						<div class="container" style="clear:both">
+							<div style="float:left; width: 50%">
+								<p>Advantages</p>
+								<ul>
+									<li>Maximize flexibility</li>
+									<li>Repeatable</li>
+									<li>Very maintainable</li>
+								</ul>
+							</div>
+							<div style="float:left; width: 50%">
+								<p>Drawbacks</p>
+								<ul>
+									<li>Complex interface</li>
+									<li>Shoot yourself in the foot</li>
+								</ul>
+							</div>
+						</div>
 					</section>
 				</section>
 
@@ -340,14 +421,14 @@
 				<section>
 					<h2>Display Suite</h2>
 
-					<p class="fragment">Control the HTML output of entities</p>
+					<p class="fragment">Control the HTML rendering of entities</p>
 					<p class="fragment">Micro level</p>
 				</section>
 
 				<section>
 					<h2>Panels</h2>
 
-					<p class="fragment">To control the HTML output of the content region</p>
+					<p class="fragment">To control the HTML rendering of the content region</p>
 					<p class="fragment">... or the entire page even.</p>
 
 					<p class="fragment">Macro level</p>
@@ -375,7 +456,10 @@
 
 					<p class="fragment"><a href="http://www.palantir.net/blog/developing-drupal-sites-plan-or-perish
 ">Palantirs' solution</a></p>
+				</section>
 
+				<section>
+					<h1>Thank you!</h1>
 				</section>
 
 			</div>
