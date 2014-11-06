@@ -53,10 +53,10 @@
 
 				<section>
 					<h2>Who is this guy?</h2>
-					<p>
-						reveal.js is a framework for easily creating beautiful presentations using HTML. You'll need a browser with
-						support for CSS 3D transforms to see it in its full glory.
-					</p>
+					<div style="clear:both; width:720px; margin: 0 auto;">
+					  <img src="./img/xio.jpg" style="float:left; height:250px; margin-right: 20px"/>
+					  <img src="./img/kopje.jpg" style="float:left; height:250px"/>
+					</div>
 				</section>
 
 				<section>
@@ -88,7 +88,7 @@
 					</section>
 
 					<section>
-						<h2>Types of pages</h2>
+						<h2>All kinds of pages</h2>
 
 						<ul>
 							<li>Detail pages</li>
@@ -100,7 +100,7 @@
 						<br />
 						<br />
 
-						<p class="fragment">What's the difference?</p>
+						<p class="fragment">Instead, think content out!</p>
 					</section>
 
 					<section>
@@ -119,17 +119,17 @@
 						<br />
 						<br />
 
-						<p class="fragment">We are talking about self contained concepts or "things"</p>
-						<p class="fragment">Can be referred to via an URI</p>
-						<p class="fragment">In Drupal speak: these are nodes or entities</p>
+						<p class="fragment">We are talking about <span style="color:orange">self contained concepts</span> or "things"</p>
+						<p class="fragment">Can be referred to via an <span style="color:orange">URI</span></p>
+						<p class="fragment">In Drupal speak: these are <span style="color:orange">entities</span> or <span style="color:orange">nodes</span></p>
 					</section>
 
 					<section>
 						<h2>Here's an important difference</h2>
 
-						<p>A HTML page describing (a) collection(s) of 'things'</p>
+						<p>An 'overview' page describing <span style="color:orange">(a) collection(s) of 'things'</span></p>
 						<p>vs.</p>
-						<p>A HTML page describing a single 'thing'</p>
+						<p>A 'detail' page describing a <span style="color:orange">single 'thing'</span></p>
 					</section>
 
 					<section>
@@ -137,27 +137,38 @@
 
 						<p>A webpage consists of a set of components</p>
 
-						<p class="fragment" style="color: orange">Recurring components</p>
+						<div class="fragment">
+							<p style="color: orange">Recurring components</p>
+							<p>Site title (logo), doormat, primary navigation,...</p>
+						</div>
 
-						<p class="fragment">Header, Footer, Navigation,...</p>
-
-						<p class="fragment" style="color: orange">Specific components</p>
-
-						<p class="fragment">Content fields (title, body, timestamp,...)</p>
+						<div class="fragment">
+							<p style="color: orange">Specific components</p>
+							<p>Content specific: fields (title, body, timestamp,...)</p>
+							<p>Context specific: related news, see also, etc. </p>
+							<p>One off's: call to actions (typically: homepage)</p>
+						</div>
 					</section>
 
 					<section>
 						<h2>The layout of a page</h2>
 
-						<p>The arrangement of the different components allowing to convey meaning in a sensical way.</p>
+						<p>The arrangement of the different components in a specific structure in order to <span style="color:orange">convey meaning in a sensical way</span>.</p>
 						<br />
-						<p class="fragment">The arrangement can be determined by the context such as:</p>
+						<p class="fragment">The structure of a layout is determined by:</p>
 						<br />
 						<ul>
-							<li class="fragment">Is the user logged in or not?</li>
-							<li class="fragment">Are we visiting a specific content type?</li>
-							<li class="fragment">Or on a specific date?</li>
+							<li class="fragment">The purpose of the page</li>
+							<li class="fragment">The context in which a page is viewed</li>
 						</ul>
+					</section>
+
+					<section>
+						<h2>Why you need this stuff</h2>
+
+						<p>You should have an idea of what you are building, before you start building it.</p>
+
+						<img src="./img/louise.penguins.jpg" width="450px" />
 					</section>
 
 					<section>
@@ -166,20 +177,11 @@
 						<p>The art and science of organizing and labelling websites, intranets, online communities and software to support usability and findability</p>
 					</section>
 
-					<section>
-						<h2>Basic principle</h2>
-
-						<p>You should have an idea of what you are building, before you start building it.</p>
-
-						<img src="./img/louise.penguins.jpg" width="450px" />
-
-					</section>
-
 				</section>
 
 				<section>
 						<h2>Out of the box</h2>
-						<h3>Taming the display of a site with core modules</h3>
+						<h3>Taming the rendition of a site with core modules</h3>
 						<img src="./img/lion-tamer.jpg" />
 				</section>
 
@@ -189,10 +191,9 @@
 						<h2>Drupal Blocks</h2>
 
 						<ul>
-							<li class="fragment">A technical implementation of components</li>
-							<li class="fragment">Arranged in regions</li>
-							<li class="fragment">Managing blocks</li>
-							<li class="fragment">Block visibility</li>
+							<li class="fragment">A naive implementation of components</li>
+							<li class="fragment">An base module of Drupal core</li>
+							<li class="fragment">First tool beginners learn to master</li>
 						</ul>
 					</section>
 
@@ -221,12 +222,12 @@
 				<!-- Fields -->
 				<section>
 					<section>
-						<h2>Field displays</h2>
+						<h2>Entity displays</h2>
 
 						<ul>
-							<li class="fragment">What are field displays?</li>
-							<li class="fragment">What are view modes?</li>
-							<li class="fragment">What are formatters?</li>
+							<li class="fragment">Control how an entity is displayed</li>
+							<li class="fragment">Granularity: field level</li>
+							<li class="fragment">Also a base part of core</li>
 						</ul>
 					</section>
 
@@ -238,7 +239,7 @@
 						<h2>Drawbacks</h2>
 
 						<ul>
-							<li class="fragment">No view mode layouts</li>
+							<li class="fragment">No control over view mode layout</li>
 							<li class="fragment">Create extra view modes?</li>
 							<li class="fragment">Control the HTML output of fields?</li>
 						</ul>
@@ -258,8 +259,8 @@
 
 						<br />
 
-						<p><span class="fragment">If you want to add/change CSS classes</span>
-						<span class="fragment">or alter the layout</span> <span class="fragment">or clean out the HTML output</span></p>
+						<p><span class="fragment">If you want to <span style="color:orange">add/change CSS classes</span></span>
+						<span class="fragment">or <span style="color:orange">alter the layout</span></span> <span class="fragment">or <span style="color:orange">clean out the HTML output</span></span></p>
 					</section>
 
 					<section>
@@ -281,7 +282,7 @@
 						<ul class="fragment">
 							<li class="fragment">Very inflexible</li>
 							<li class="fragment">Hard to mantain afterwards</li>
-							<li class="fragment">Risk of leaking business logic</li>
+							<li class="fragment">Risk of leaking business logic in templates</li>
 						</ul>
 					</section>
 
@@ -460,6 +461,8 @@
 
 				<section>
 					<h1>Thank you!</h1>
+
+					<img src="./img/kitten.jpg" />
 				</section>
 
 			</div>
